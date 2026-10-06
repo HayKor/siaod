@@ -1,12 +1,12 @@
 SRC = $(wildcard src/*.typ)
-PDF = $(SRC:src/%.typ=output/%.pdf)
+PDF = $(SRC:src/%.typ=build/%.pdf)
 
 all: $(PDF)
 
-output/%.pdf: src/%.typ include/settings.typ
+build/%.pdf: src/%.typ include/settings.typ
 	typst compile --root .. $< $@
 
 clean:
-	rm -f output/*.pdf
+	rm -f build/*.pdf
 
 .PHONY: all clean

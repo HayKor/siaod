@@ -4,6 +4,8 @@
 #show raw.where(block: true): set text(size: 10pt)
 #show figure: set block(breakable: false)
 
+#counter(page).update(2)
+
 #let lines = read("/practices/5/src/car.cpp").split("\n")
 
 // Функция из car.cpp вместе с комментарием-контрактом над ней
